@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Style</title>
+    <link rel="stylesheet" href="pro10.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JavaScript Bundle (Includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function fun(){
+            window.location.href="sign_in.html"
+        }
+        let search_items = {
+            "bamboo dish": "dish1.html",
+            "dish": "dish1.html",
+            "dishes": "dish1.html",
+            "sugarcane dish": "dish1.html",
+            "cup": "cup.html",
+            "cups": "cup.html",
+            "straw": "cutlery.html",
+            "cutlery": "cutlery.html",
+            "straws": "cutlery.html",
+            "napkin": "napkin.html",
+            "napkins": "napkin.html",
+            "box": "box.html",
+            "boxes": "box.html",
+            "box with lid": "box.html",
+            "lid box": "box.html",
+            "lid": "box.html",
+            "lid  boxes": "box.html",
+            "cake box": "box.html",
+            "cake boxes": "box.html",
+            "cake": "box.html",
+            "cake boxes with lid": "box.html",
+            "cake box with lid": "box.html",
+            "cake lid box": "box.html",
+            "spoons": "cutlery.html",
+            "forks": "cutlery.html",
+            "knives": "cutlery.html",
+            "cutlery set": "cutlery.html",
+            "cutlery sets": "cutlery.html"
+        };
+    
+        function search() {
+            var x = document.getElementById("search").value.toLowerCase().trim();  // Convert input to lowercase
+    
+            if (x === "") {
+                alert("Please enter something to search");
+            } 
+            else if (search_items[x]) { 
+                window.location.href = search_items[x]; // Redirect to the correct page
+            } 
+            else {
+                alert("Item not found! Please try another search.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a href="pro10.html" class="navbar-brand">
+                <img src="one_stop.png" alt="Logo" class="logo">
+            </a>
+    
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible Content (Search Bar + Navigation Links) -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Search Bar -->
+                <div class="search-container d-flex mx-auto my-2 my-lg-0">
+                    <div class="input-group">
+                        <input type="text" id="search" class="form-control search-input" placeholder="Enter here to search">
+                        <button onclick="search()" id="search-icon" class="btn btn-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="pro10.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="#about_us" class="nav-link">ABOUT US</a></li>
+                    <li class="nav-item"><a href="#contact_us" class="nav-link">CONTACT</a></li>
+                    <li class="nav-item"><a href="#FAQs" class="nav-link">FAQs</a></li>
+                    <li class="nav-item">
+                        <a href="sign_in.html" class="nav-link">
+                            <svg onclick="fun1()" style="width: 40px; height:30px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h5>Categories</h5>
+    <div class="d-flex justify-content-around" id="div4">
+        <div>
+            <img src="dishes1.webp" alt="">
+            <a href="dish1.html">Dishes</a>
+            
+           
+        </div>
+        <!-- Add other dropdown elements here -->
+        <div>
+            <img src="logo_cups.png" alt="">
+            <a href="cup.html">Cups</a>
+            
+
+        </div>
+        <div >
+            <img src="logo_boxes.png"alt="">
+            <a href="box.html">Boxes</a>
+        </div>
+        <div>
+            <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/VB/BU/MJ/15698490/wooden-cutlery-500x500.jpg"alt="">
+            <a href="cutlery.html">Cutlery&Straws</a>
+            
+
+        </div>
+        
+        <div>
+            <img src="logo_napkins1.png"alt="">
+            <a href="napkin.html">Napkins&Glooves</a>
+            
+        </div>
+    </div>
+    
+    <!-- Carousel -->
+    <h5 id="offer" class="text-center mt-4">New Offers</h5>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://t4.ftcdn.net/jpg/03/01/35/29/360_F_301352990_8dEOXfie26stsS3XTF84SLDoniRna4mZ.jpg" alt="AHMEDABAD" class="d-block w-100">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="https://thumbs.dreamstime.com/b/eco-friendly-fast-food-containers-isolated-white-paper-cardboard-background-packaging-165113982.jpg" alt="Gandhinagar" class="d-block w-100">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.shutterstock.com/image-illustration/packaging-product-brown-craft-cardboard-600nw-2197642887.jpg" alt="Another Place" class="d-block w-100">
+                
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div id="about_us" class="container mt-5">
+        <div class="row">
+            <!-- Image Section -->
+            <div class="col-sm-6">
+       
+                <img src=" d:\individual_sem-3\maps.PNG" alt="Company Image" class="img-fluid rounded shadow">
+            </div>
+    
+            <!-- Text Section -->
+            <div class="col-sm-6">
+                <h2>About Us</h2>
+                <p>Welcome to <strong>OneStop Disposables</strong>, your ultimate destination for high-quality and eco-friendly disposable products. 
+                    We take pride in offering a diverse range of items, including tableware, packaging solutions, and other sustainable essentials. 
+                    Our goal is to provide a hassle-free shopping experience with unbeatable prices, top-notch quality, and exceptional customer service.</p>
+                    
+                 <p>Founded by <strong>Ketan Vaghajiyani</strong>, OneStop Disposables is committed to making sustainable and convenient solutions accessible to everyone.</p>
+                 
+                <p><strong>Why Choose Us?</strong></p>
+                <ul>
+                    <li>Wide range of products</li>
+                    <li>Affordable prices & exclusive offers</li>
+                    <li>Secure and easy payment options</li>
+                    <li>Fast delivery and 24/7 customer support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="contact_us" class="container mt-5">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">We'd love to hear from you! Reach out to us for any queries or support.</p>
+        
+        <div class="row">
+            <!-- Contact Details -->
+            <div class="col-lg-6">
+                <h4>Get in Touch</h4>
+                <p><strong>Address:</strong> 123, Shopping Street, City, Country</p>
+                <p><strong>Email:</strong> support@shopsphere.com</p>
+                <p><strong>Phone:</strong> +91 982539963</p>
+                <p><strong>Working Hours:</strong> Mon - Sat: 9:00 AM - 6:00 PM</p>
+            </div>
+    
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn" id="submit_contact_us">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Accordion Section -->
+    <div id="FAQs">
+    <div id="accordion"  id="FAQs" class="container mt-5">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    
+        <div class="card">
+            <div class="card-header">
+                <a href="#collapseOne" class="card-link" data-bs-toggle="collapse">What is OneStop Disposables?</a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                <div class="card-body">
+                    OneStop Disposables is your one-stop destination for high-quality products, including clothes, electronics, books, shoes, and stationery.
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-header">
+                <a href="#collapseTwo" class="card-link" data-bs-toggle="collapse">What payment methods do you accept?</a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    We accept credit/debit cards, UPI, net banking, and COD (Cash on Delivery) for your convenience.
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-header">
+                <a href="#collapseThree" class="card-link" data-bs-toggle="collapse">How can I track my order?</a>
+            </div>
+            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    You can track your order by logging into your account and navigating to the "My Orders" section.
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-header">
+                <a href="#collapseFour" class="card-link" data-bs-toggle="collapse">What is your return policy?</a>
+            </div>
+            <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    We offer a 7-day easy return policy for all our products. If you’re not satisfied, you can return the product within 7 days of delivery.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="text-center  mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="pro10.html" class="text-white">Home</a></li>
+                        <li><a href="#about_us" class="text-white">About Us</a></li>
+                        <li><a href="#contact_us" class="text-white">Contact</a></li>
+                        <li><a href="#faqs" class="text-white">FAQs</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                </div>
+    
+                <!-- Newsletter -->
+                <div class="col-md-4">
+                    <h5>Subscribe to Our Newsletter</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <hr class="my-3">
+            <p class="mb-0">&copy; 2025 OneStop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    
+
+
+</body>
+</html>

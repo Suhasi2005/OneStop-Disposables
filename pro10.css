@@ -1,0 +1,444 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fixed Navbar */
+.navbar {
+    background-color: rgb(163, 165, 209);
+    padding: 10px 20px;
+    position: fixed;  /* Keep navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensures navbar stays above all content */
+    height: auto;
+    
+}
+
+/* To prevent content from hiding behind the fixed navbar */
+
+
+/* Logo */
+.logo {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Search Box */
+.search-input {
+    border-radius: 5px 0 0 5px;
+}
+
+#search-icon {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item .nav-link {
+    color: white !important;
+}
+
+.nav-item .nav-link:hover {
+    color: white;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    #nav-links {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+}
+/* Style for anchor links under images */
+#div4 {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    margin-top: 50px;
+    padding: 10px; /* Add some padding */
+}
+
+#div4 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px; /* Control item width */
+}
+
+/* Ensure images are properly sized and responsive */
+#div4 img {
+    height: 80px; 
+    width: 80px;
+    object-fit: contain; /* Prevent distortion */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    margin-bottom: 8px;
+    margin-top: 50px;
+}
+
+/* Enlarge images slightly on hover */
+#div4 img:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for links */
+#div4 a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    /* background-color: #f0f0f0; */
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 25px;
+}
+
+/* Change background on hover */
+#div4 a:hover {
+    background-color: #ccc;
+}
+
+/* 📱 Responsive: Stack items in 2 columns for tablets, 1 column for mobile */
+@media (max-width: 768px) {
+    #div4 {
+        justify-content: space-evenly;
+    }
+    #div4 div {
+        width: 45%; /* Fit two items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    #div4 {
+        flex-direction: column;
+        align-items: center;
+    }
+    #div4 div {
+        width: 100%; /* Stack items vertically */
+    }
+}
+#offer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 24px; /* Slightly larger font size */
+    font-weight: bold;
+    color: #008080; /* Matching the navbar color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: pulse 1.5s infinite, fadeIn 2s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #008080;
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger scale */
+        color: #008080; /* Slightly different color */
+    }
+    100% {
+        transform: scale(1);
+        color: #008080;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#demo{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.carousel-inner img {
+    width: 100%;  /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height:400px; /* Prevents excessive height */
+    object-fit:fill; /* Ensures proper fitting without stretching */
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+#about_us {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#about_us h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #343a40;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#about_us p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+#about_us ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about_us ul li {
+    font-size: 16px;
+    color: #444;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+#about_us ul li:hover {
+    color: #008080;
+    font-weight: 600;
+}
+
+/* Image Styling */
+#about_us img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+#about_us img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about_us {
+        text-align: left;
+        padding: 30px;
+    }
+    
+    #about_us h2 {
+        font-size: 28px;
+    }
+
+    #about_us p {
+        font-size: 16px;
+    }
+}
+/* Contact Us Section */
+#contact_us {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading Styles */
+#contact_us h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #343a40;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Contact Info Styles */
+#contact_us h4 {
+    font-size: 28px;
+    color: #008080;
+    margin-bottom: 10px;
+}
+
+#contact_us p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Contact Form Styling */
+#contact_us .form-label {
+    font-weight: 600;
+    color: #008080;
+}
+
+#contact_us .form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+#contact_us .form-control:focus {
+    border-color: hsl(211, 100%, 50%);
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+#submit_contact_us {
+    background-color:#5c8a8a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    color:white;
+    cursor: pointer;    
+    /* transition: all 0.3s ease-in-out; */
+}
+submit_contact_us:hover {
+    background-color: #008080;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact_us {
+        padding: 30px;
+    }
+
+    #contact_us h2 {
+        font-size: 28px;
+    }
+
+    #contact_us p {
+        font-size: 16px;
+    }
+
+    #contact_us .btn-dark {
+        font-size: 16px;
+    }
+}
+/* ===== Accordion Styling ===== */
+#accordion .card {
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#accordion .card-header {
+    background-color: #5c8a8a;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+    cursor: pointer;
+}
+
+#accordion .card-header a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#accordion .card-body {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+}
+
+#accordion .card-header:hover {
+    background-color:#008080;
+}
+
+/* Accordion Animation */
+.collapse {
+    transition: all 0.3s ease-in-out;
+}
+/* Footer Styles */
+/* Footer Styling */
+/* Footer Styling with Teal Background */
+footer {
+    background-color:rgb(163, 165, 209); /* Teal background */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8f9fa; /* Light white */
+}
+
+footer .list-unstyled li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .list-unstyled li a:hover {
+    color: #d1faff; /* Lighter teal on hover */
+}
+
+footer .social-icons a {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+footer .input-group {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+footer .form-control {
+    border-radius: 30px 0 0 30px;
+    border: none;
+}
+
+footer .btn-light {
+    background-color: #008080; /* Light teal button */
+    border-radius: 0 30px 30px 0;
+    border: none;
+    color: white;
+}
+
+footer .btn-light:hover {
+    background-color: #005252; /* Slightly darker teal */
+}
+
+footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    margin: 20px auto;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
