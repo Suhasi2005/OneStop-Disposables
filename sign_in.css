@@ -1,0 +1,171 @@
+h2{
+    text-align: center;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Additional Styles */
+
+/* Center the sign-in container */
+.sign-in-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for error messages */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style for success messages */
+.success-message {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style for the footer */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* Container for the sign-in form */
+.sign-in-container {
+    max-width: 400px;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Form input fields */
+.sign-in-container input[type="text"],
+.sign-in-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Sign-in button */
+.sign-in-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(163, 165, 209);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-in-container button:hover {
+    background-color: rgb(163, 165, 209);
+}
+
+/* Link to sign up or forgot password */
+.sign-in-container .form-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color:rgb(163, 165, 209);
+    text-decoration: none;
+}
+
+.sign-in-container .form-link:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+.navbar {
+    background-color: rgb(163, 165, 209);
+    padding: 10px 20px;
+    position: fixed;  /* Keep navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensures navbar stays above all content */
+}
+#div4 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    margin-top: 85px;
+    background-color:beige
+}
+#div4 a {
+    display: block; /* Space between image and link */
+    padding: 5px 10px;
+    text-decoration: none;
+
+    color: black;
+    /* Light background */
+    border-radius: 5px;
+    
+}
+
+
+
+/* To prevent content from hiding behind the fixed navbar */
+
+
+/* Logo */
+.logo {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Search Box */
+.search-input {
+    border-radius: 5px 0 0 5px;
+}
+
+#search-icon {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item .nav-link {
+    color: white !important;
+}
+
+.nav-item .nav-link:hover {
+    color: white;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    #nav-links {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+}
