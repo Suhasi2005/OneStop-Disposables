@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header Styles */
+.navbar {
+    background-color: rgb(163, 165, 209);
+    padding: 10px 20px;
+    position: fixed;  /* Keep navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensures navbar stays above all content */
+    height: auto;
+    
+}
+#div4 {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: center; /* Centers items */
+    gap: 15px; /* Space between items */
+    margin-top: 79px;
+    background-color: beige;
+    padding: 10px;
+}
+
+#div4 a {
+    display: block;
+    /* margin-top: auto; */
+    /* margin-top: 75px; */
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    /* background-color: white; Light background for better visibility */
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+#div4 a:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Design: Stack links vertically on smaller screens */
+@media (max-width: 600px) {
+    #div4 {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align items */
+    }
+}
+
+
+
+/* To prevent content from hiding behind the fixed navbar */
+
+
+/* Logo */
+.search-input {
+    border-radius: 5px 0 0 5px;
+}
+
+#search-icon {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item .nav-link {
+    color: white !important;
+}
+
+.nav-item .nav-link:hover {
+    color: white;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    #nav-links {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+}
+
+/* Animation for fading in elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#heading {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50; /* Darker shade for better contrast */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 1px; /* Add some spacing between letters */
+    /* border-bottom: 2px solid #2c3e50; Add a bottom border */
+    padding-bottom: 5px; /* Add some padding at the bottom */
+    /* animation: fadeIn 1s ease-in-out; Add fadeIn animation */
+}
+
+#para {
+    font-family: 'Georgia', serif;
+    color: #2c3e50; /* Darker shade for better contrast */
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px; /* Add some space below paragraphs */
+    text-indent: 20px; /* Indent the first line of each paragraph */
+    background-color: #ecf0f1; /* Light background for better readability */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    /* animation: fadeIn 1s ease-in-out; Add fadeIn animation */
+}
+/* Apply the fadeIn animation to the product containers */
+.product-container {
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 35px;
+}
+/* Container holding the product columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px; /* Adjust spacing */
+}
+
+/* Each column takes 25% width on large screens */
+.col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Tablets */
+    .col-sm-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) { /* Mobile devices */
+    .col-sm-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Product container styles */
+.product-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover effects */
+.product-container:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Image styling for consistency */
+.product-container img {
+    width: 100%;
+    max-height: 200px; /* Ensure consistency */
+    object-fit: contain; /* Prevent distortion */
+    display: block;
+    transition: transform 0.3s ease;
+    aspect-ratio: 1 / 1; /* Maintain aspect ratio */
+}
+
+/* Image scaling effect on hover */
+.product-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Style for product details */
+.product-details {
+    padding-top: 10px;
+    color: #333;
+    text-align: center;
+}
+footer {
+    background-color:rgb(163, 165, 209); /* Teal background */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8f9fa; /* Light white */
+}
+
+footer .list-unstyled li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .list-unstyled li a:hover {
+    color: #d1faff; /* Lighter teal on hover */
+}
+
+footer .social-icons a {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+footer .input-group {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+footer .form-control {
+    border-radius: 30px 0 0 30px;
+    border: none;
+}
+
+footer .btn-light {
+    background-color: #008080; /* Light teal button */
+    border-radius: 0 30px 30px 0;
+    border: none;
+    color: white;
+}
+
+footer .btn-light:hover {
+    background-color: #005252; /* Slightly darker teal */
+}
+
+footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    margin: 20px auto;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
