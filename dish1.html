@@ -1,0 +1,286 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro6</title>
+    <link rel="stylesheet" href="dish.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function fun(){
+            window.location.href="sign_in.html"
+        }
+        let search_items = {
+            "bamboo dish": "dish1.html",
+            "dish": "dish1.html",
+            "dishes": "dish1.html",
+            "sugarcane dish": "dish1.html",
+            "cup": "cup.html",
+            "cups": "cup.html",
+            "straw": "cutlery.html",
+            "cutlery": "cutlery.html",
+            "straws": "cutlery.html",
+            "napkin": "napkin.html",
+            "napkins": "napkin.html",
+            "box": "box.html",
+            "boxes": "box.html",
+            "box with lid": "box.html",
+            "lid box": "box.html",
+            "lid": "box.html",
+            "lid boxes": "box.html",
+            "cake box": "box.html",
+            "cake boxes": "box.html",
+            "cake": "box.html",
+            "cake boxes with lid": "box.html",
+            "cake box with lid": "box.html",
+            "cake lid box": "box.html",
+            "spoons": "cutlery.html",
+            "forks": "cutlery.html",
+            "knives": "cutlery.html",
+            "cutlery set": "cutlery.html",
+            "cutlery sets": "cutlery.html"
+        };
+    
+        function search() {
+            var x = document.getElementById("search").value.toLowerCase().trim();  // Convert input to lowercase
+    
+            if (x === "") {
+                alert("Please enter something to search");
+            } 
+            else if (search_items[x]) { 
+                window.location.href = search_items[x]; // Redirect to the correct page
+            } 
+            else {
+                alert("Item not found! Please try another search.");
+            }
+        }
+        const pageMap = {
+            dish1: "buy_now.html",
+            dish2: "dish_image2_buynow.html",
+            dish3: "dish_image3_buynow.html",
+            dish4: "dish_image4_buynow.html",
+            dish5: "dish_image5_buynow.html",
+            dish6: "dish_image6_buynow.html",
+            dish7: "dish_image7_buynow.html",
+            dish8: "dish_image8_buynow.html",
+            signin: "sign_in.html"
+        };
+
+        function navigateToImage(id) { 
+            for (let key in pageMap) {  // Loop through all keys in pageMap
+                if (key === id) {       // Check if the clicked id matches a key
+                    window.location.href = pageMap[key]; // Navigate to the corresponding page
+                    return;
+                }
+            }
+            console.error("No matching key found for ID:", id);
+        }
+        
+    </script>
+    </head>
+    <body class="scrollspy">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a href="pro10.html" class="navbar-brand">
+                    <img src="one_stop.png" alt="Logo" class="logo">
+                </a>
+        
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Collapsible Content (Search Bar + Navigation Links) -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- Search Bar -->
+                    <div class="search-container d-flex mx-auto my-2 my-lg-0">
+                        <div class="input-group">
+                            <input id="search" type="text" class="form-control search-input" placeholder="Enter here to search">
+                            <button onclick="search()" id="search-icon" class="btn btn-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="pro10.html" class="nav-link">HOME</a></li>
+                        <li class="nav-item"><a href="pro10.html" class="nav-link">ABOUT US</a></li>
+                        <li class="nav-item"><a href="pro10.html" class="nav-link">CONTACT</a></li>
+                        <li class="nav-item"><a href="pro10.html" class="nav-link">FAQs</a></li>
+                        <li class="nav-item">
+                            <a href="sign_in.html" class="nav-link">
+                                <svg style="width: 40px; height:30px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                </svg>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+        
+        <div class="d-flex justify-content-around" id="div4">
+            <a href="dish1.html">Dishes</a>
+            <a href="cup.html">Cups</a>
+            <a href="box.html">Boxes</a>
+            <a href="cutlery.html">Cutlery & Straw</a>
+            <a href="napkin.html">Napkins</a>
+
+            
+        </div>
+        <div>
+            <!-- <h4 id="heading"> Dishes</h4>
+            <p id="para">**"Introducing Eco-Friendly Sugarcane Dishes: A Sustainable Dining Choice!"**  
+
+                Upgrade your dining experience with our premium **sugarcane dishes**, a perfect blend of style, sustainability, and convenience! Made from 100% natural and biodegradable sugarcane fibers, these dishes are designed to be eco-friendly while offering exceptional durability. Whether it’s for everyday meals, parties, or catering, our sugarcane dishes are microwave-safe, leak-resistant, and ideal for both hot and cold food.  
+                
+                </p>
+                 -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish1" src="https://tiimg.tistatic.com/fp/1/007/633/sustainably-sourced-and-sugarcane-fibers-biodegradable-brown-disposable-paper-plate-109.jpg" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish1')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                
+                                <p>Price: Rs125</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish2" src="https://m.media-amazon.com/images/I/51C8TI+LSlL.jpg" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish2')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs125</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish3" src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/CIW/2024/7/22/c6eb21dd-179d-4e9d-b9cc-a0ec47a2ca02_disposableplatescups_XCQCQHNA7L_MN.png" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish3')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs155</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl9PTWiSvU1qPYLPUMCysdvhJBNMKFd2WTxQefYhIAw_9j_ErFdrtkEXDO5SAiKHd7D54&usqp=CAU" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish4')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs155</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish5" src="https://ecodining.co.uk/cdn/shop/files/EcoFlavour-7-Compartment-Bagasse-Plate.jpg?v=1709706878" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish5')">
+                              <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs115</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish6" src="https://m.media-amazon.com/images/I/61u7dIi9i1L.jpg" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish6')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs115</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish7" src="https://m.media-amazon.com/images/I/51kcHWaTIJL._AC_UF894,1000_QL80_.jpg" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish7')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs165</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-container">
+                            <img id="dish8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp0FDwFaiG6dtGTVVYcU9O3AjhkYT2oX2AlUo7FJOMN5QTlsWrp_VYg6VY5ns85kA_L2s&usqp=CAU" 
+                                 alt="sugarcane" 
+                                 onclick="navigateToImage('dish8')">
+                            <div class="product-details">
+                                <h5>Dish</h5>
+                                <p>Price: Rs125</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="text-center  mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Quick Links -->
+                            <div class="col-md-4">
+                                <h5>Quick Links</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="pro10.html" class="text-white">Home</a></li>
+                                    <li><a href="#about_us" class="text-white">About Us</a></li>
+                                    <li><a href="#contact_us" class="text-white">Contact</a></li>
+                                    <li><a href="#faqs" class="text-white">FAQs</a></li>
+                                </ul>
+                            </div>
+                
+                            <!-- Social Media -->
+                            <div class="col-md-4">
+                                <h5>Follow Us</h5>
+                                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                
+                            <!-- Newsletter -->
+                            <div class="col-md-4">
+                                <h5>Subscribe to Our Newsletter</h5>
+                                <form>
+                                    <div class="input-group mb-3">
+                                        <input type="email" class="form-control" placeholder="Enter your email">
+                                        <button class="btn btn-light" type="submit">Subscribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                
+                        <hr class="my-3">
+                        <p class="mb-0">&copy; 2025 OneStop. All rights reserved.</p>
+                    </div>
+                </footer>
+                
+       
+    
+    </body>
+</html>
